@@ -1,0 +1,73 @@
+-- DAX measures for the Sales Pipeline & Forecast Dashboard
+-- Paste into a Power BI measure table (e.g. "Pipeline Measures").
+
+Total Pipeline =
+CALCULATE (
+    SUM ( Opportunities[amount] ),
+    Opportunities[stage] IN { "Prospecting", "Qualification", "Proposal", "Negotiation" }
+)
+
+Won Revenue =
+CALCULATE (
+    SUM ( Opportunities[amount] ),
+    Opportunities[stage] = "Closed Won"
+)
+
+Lost Revenue =
+CALCULATE (
+    SUM ( Opportunities[amount] ),
+    Opportunities[stage] = "Closed Lost"
+)
+
+Win Rate =
+DIVIDE (
+    [Won Revenue],
+    [Won Revenue] + [Lost Revenue],
+    0
+)
+
+Total Quota =
+SUM ( 'Sales Reps'[annual_quota] )
+
+Quota Attainment % =
+DIVIDE ( [Won Revenue], [Total Quota], 0 )
+
+Weighted Pipeline =
+SUMX (
+    Opportunities,
+    Opportunities[amount]
+        * SWITCH (
+            Opportunities[stage],
+            "Prospecting", 0.10,
+            "Qualification", 0.25,
+            "Proposal", 0.50,
+            "Negotiation", 0.75,
+            0
+        )
+)
+
+Forecast Commit =
+CALCULATE (
+    SUM ( Opportunities[amount] ),
+    Opportunities[forecast_category] = "Commit",
+    Opportunities[stage] <> "Closed Won",
+    Opportunities[stage] <> "Closed Lost"
+)
+
+Avg Deal Size =
+AVERAGEX (
+    FILTER ( Opportunities, Opportunities[stage] = "Closed Won" ),
+    Opportunities[amount]
+)
+
+Avg Sales Cycle (days) =
+AVERAGEX (
+    FILTER ( Opportunities, Opportunities[stage] IN { "Closed Won", "Closed Lost" } ),
+    DATEDIFF ( Opportunities[created_date], Opportunities[close_date], DAY )
+)
+
+Won Revenue YTD =
+TOTALYTD ( [Won Revenue], 'Date'[Date] )
+
+Pipeline Coverage =
+DIVIDE ( [Total Pipeline], [Total Quota], 0 )

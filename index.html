@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ekene Nwokoye — Data Analyst Portfolio</title>
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<header class="hero">
+  <h1>Ekene Nwokoye</h1>
+  <p class="tagline">Data Analyst · Sales Operations · Business Intelligence</p>
+  <p class="intro">I turn messy operational data into answers leaders can act on — pipeline forecasts, commission plans, CRM hygiene, fulfillment diagnostics, churn models, and financial controls. Power BI · SQL · Python · Excel.</p>
+  <nav class="links">
+    <a href="https://www.linkedin.com/in/enwokoye">LinkedIn</a>
+    <a href="https://github.com/enwokoye94">GitHub</a>
+    <a href="mailto:enwokoye94@hotmail.com">Email</a>
+  </nav>
+</header>
+
+<main>
+  <section class="projects">
+    <h2>Sales Operations &amp; Analytics Projects</h2>
+    <div class="grid">
+
+      <article class="card">
+        <div class="card-tag">Power BI · DAX</div>
+        <h3>Sales Pipeline &amp; Forecast Dashboard</h3>
+        <p>Pipeline by stage and rep, quota attainment, and forecast accuracy on 2,500 synthetic CRM opportunities. Star-schema model, 12 DAX measures, weighted pipeline logic.</p>
+        <ul>
+          <li>Win rate 58% · TTM quota attainment 150%</li>
+          <li>Stage-weighted forecasting (10/25/50/75%)</li>
+        </ul>
+        <a class="btn" href="https://github.com/enwokoye94/data-analyst-portfolio/tree/main/01-sales-pipeline-forecast-dashboard">View project</a>
+      </article>
+
+      <article class="card">
+        <div class="card-tag">Excel</div>
+        <h3>Sales Commission Calculator</h3>
+        <p>Full comp-plan workbook on 531 synthetic deals: marginal tiers (5/8/12%), 2% accelerator, $500 new-logo spiffs, recoverable draw — every calculated cell a live Excel formula.</p>
+        <ul>
+          <li>$14.78M revenue → $854.5K payout (5.8%)</li>
+          <li>Avg attainment 99.2% · top earner $111,708</li>
+        </ul>
+        <a class="btn" href="https://github.com/enwokoye94/data-analyst-portfolio/tree/main/05-sales-commission-calculator">View project</a>
+      </article>
+
+      <article class="card">
+        <div class="card-tag">Python</div>
+        <h3>Pipeline Forecast &amp; Quota Attainment</h3>
+        <p>Explainable seasonal-trend forecast on 24 months of pipeline history with a held-out backtest, per-segment attainment outlook, and pipeline-coverage gap math.</p>
+        <ul>
+          <li>Backtest MAPE 9.4% across segments</li>
+          <li>Enterprise at 74.9% attainment — $742K shortfall flagged</li>
+        </ul>
+        <a class="btn" href="https://github.com/enwokoye94/data-analyst-portfolio/tree/main/08-pipeline-forecast-quota">View project</a>
+      </article>
+
+      <article class="card">
+        <div class="card-tag">Python</div>
+        <h3>CRM Data-Quality Audit</h3>
+        <p>Reusable audit toolkit run against a messy 5,000-record CRM export: duplicates, missingness, invalid emails, stage-name chaos, date violations — scored 0–100 with a cleaned output.</p>
+        <ul>
+          <li>Hygiene 71.4 → 83.2 · 294 duplicates removed</li>
+          <li>26 stage spellings standardized to 5</li>
+        </ul>
+        <a class="btn" href="https://github.com/enwokoye94/data-analyst-portfolio/tree/main/07-crm-data-quality-audit">View project</a>
+      </article>
+
+      <article class="card">
+        <div class="card-tag">SQL</div>
+        <h3>Order Operations Analysis</h3>
+        <p>Fulfillment diagnostics on 5,000 orders: on-time delivery by region, rep leaderboard with window functions, late-shipment trends, backlog at risk, cancellations by segment.</p>
+        <ul>
+          <li>CTEs, RANK(), running totals</li>
+          <li>Portable across SQL Server, Postgres, Snowflake</li>
+        </ul>
+        <a class="btn" href="https://github.com/enwokoye94/data-analyst-portfolio/tree/main/02-order-operations-sql">View project</a>
+      </article>
+
+      <article class="card">
+        <div class="card-tag">SQL · Python</div>
+        <h3>RFM Customer Segmentation</h3>
+        <p>Recency/Frequency/Monetary scoring in SQL (NTILE quintiles) on 2,000 customers and 23K transactions, with segment plays for retention and win-back prioritization.</p>
+        <ul>
+          <li>Top 40% of customers drive 83.7% of revenue</li>
+          <li>$3.63M win-back list quantified</li>
+        </ul>
+        <a class="btn" href="https://github.com/enwokoye94/data-analyst-portfolio/tree/main/06-rfm-customer-segmentation">View project</a>
+      </article>
+
+    </div>
+
+    <h2>Machine Learning &amp; Data Science</h2>
+    <div class="grid">
+
+      <article class="card">
+        <div class="card-tag">Python</div>
+        <h3>Customer Churn Analysis</h3>
+        <p>EDA plus a from-scratch logistic regression on 3,000 telecom customers. Month-to-month contracts churn at 38% vs 15% on annual — the clearest retention lever.</p>
+        <ul>
+          <li>76.8% accuracy · honest precision/recall discussion</li>
+          <li>Gradient descent implemented by hand, no sklearn</li>
+        </ul>
+        <a class="btn" href="https://github.com/enwokoye94/data-analyst-portfolio/tree/main/03-customer-churn-python">View project</a>
+      </article>
+
+      <article class="card">
+        <div class="card-tag">Jupyter</div>
+        <h3>Data Science Salary Analysis</h3>
+        <p>Glassdoor scraping (Selenium), Plotly state choropleths, and salary prediction — Lasso beats linear regression and random forests on this data.</p>
+        <ul>
+          <li>Lasso MAE ≈ $21.3K (best model)</li>
+          <li>Interactive salary-by-state maps</li>
+        </ul>
+        <a class="btn" href="https://github.com/enwokoye94/DS-Salary-Analysis">View project</a>
+      </article>
+
+      <article class="card">
+        <div class="card-tag">Jupyter</div>
+        <h3>Airbnb Listings Exploration</h3>
+        <p>Large-scale EDA: 1.06M listings, ~17M calendar rows, ~1.06M reviews. Currency-string cleaning, date parsing, and host-vs-rental feature engineering at scale.</p>
+        <ul>
+          <li>Reusable data-profiling helpers</li>
+          <li>Analysis-ready feature sets from raw extracts</li>
+        </ul>
+        <a class="btn" href="https://github.com/enwokoye94/AirBnB-">View project</a>
+      </article>
+
+      <article class="card">
+        <div class="card-tag">Jupyter</div>
+        <h3>House Prices &amp; Heating</h3>
+        <p>Ames housing EDA: correlation heatmaps, price-per-decade distributions, and heating/fuel-cost comparisons. What actually drives sale price?</p>
+        <ul>
+          <li>Overall quality r = 0.79 with price</li>
+          <li>Median sale price $163,000</li>
+        </ul>
+        <a class="btn" href="https://github.com/enwokoye94/House-Prices-and-Heating">View project</a>
+      </article>
+
+      <article class="card">
+        <div class="card-tag">Jupyter</div>
+        <h3>World Happiness Analysis</h3>
+        <p>Five years of World Happiness Reports (158 countries): which factors track with national happiness, and how much is just GDP?</p>
+        <ul>
+          <li>GDP per capita r = 0.78 · generosity r = 0.18</li>
+          <li>Switzerland #1 in 2015</li>
+        </ul>
+        <a class="btn" href="https://github.com/enwokoye94/World-Happiness-Analysis">View project</a>
+      </article>
+
+      <article class="card">
+        <div class="card-tag">Jupyter</div>
+        <h3>Store Sales Analysis</h3>
+        <p>Twelve monthly extracts consolidated, cleaned, and visualized — monthly trends, city/state rankings, and hourly order patterns for a retail chain.</p>
+        <ul>
+          <li>December peak: $4.61M</li>
+          <li>San Francisco $8.25M · California $13.7M</li>
+        </ul>
+        <a class="btn" href="https://github.com/enwokoye94/Store-Sales">View project</a>
+      </article>
+
+    </div>
+
+    <h2>Financial Controls</h2>
+    <div class="grid">
+
+      <article class="card">
+        <div class="card-tag">Excel</div>
+        <h3>Revenue Reconciliation Case Study</h3>
+        <p>Month-end close control: 122 invoices reconciled between billing and ERP extracts with a fully formula-driven workbook — INDEX/MATCH, variance flags, live summary dashboard.</p>
+        <ul>
+          <li>112 matched · 5 variances · 5 missing-side exceptions</li>
+          <li>Zero manual matching, audit-ready</li>
+        </ul>
+        <a class="btn" href="https://github.com/enwokoye94/data-analyst-portfolio/tree/main/04-revenue-reconciliation-excel">View project</a>
+      </article>
+
+    </div>
+  </section>
+
+  <section class="skills">
+    <h2>Toolkit</h2>
+    <div class="chips">
+      <span>Power BI</span><span>DAX</span><span>SQL</span><span>Python</span>
+      <span>Advanced Excel</span><span>Power Query</span><span>Salesforce</span>
+      <span>Oracle ERP</span><span>SharePoint</span><span>scikit-learn</span>
+      <span>Selenium</span><span>Plotly</span>
+    </div>
+  </section>
+
+  <section class="about">
+    <h2>About</h2>
+    <p>Data Consultant (contract) at Summit Midstream and Order Specialist (remote, contract) at AT&T via Pinnacle Group. B.S. Mechanical Engineering, University of New Hampshire. I specialize in sales operations analytics: pipeline reporting, forecasting, commission modeling, CRM data quality, order data, reconciliation, and the dashboards revenue teams run on.</p>
+  </section>
+</main>
+
+<footer>
+  <p>Houston, TX · <a href="mailto:enwokoye94@hotmail.com">enwokoye94@hotmail.com</a></p>
+  <p class="fine">All project data is synthetic and generated for portfolio purposes.</p>
+</footer>
+</body>
+</html>

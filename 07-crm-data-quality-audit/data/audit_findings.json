@@ -1,0 +1,117 @@
+{
+  "as_of": "2026-09-25",
+  "source_file": "crm_export_messy.csv",
+  "records": 5000,
+  "completeness_pct": {
+    "opportunity_id": 100.0,
+    "account_name": 97.52,
+    "contact_email": 96.86,
+    "owner_id": 100.0,
+    "stage": 95.7,
+    "amount": 95.32,
+    "close_date": 93.76,
+    "created_date": 100.0,
+    "source": 100.0
+  },
+  "duplicates": {
+    "duplicate_rows": 294,
+    "duplicate_rate_pct": 5.88,
+    "duplicate_groups": 279,
+    "by_source": {
+      "Bulk Import": 57,
+      "Inbound Call": 51,
+      "Web Form": 51,
+      "Outbound SDR": 50,
+      "Trade Show": 46,
+      "Partner Referral": 39
+    }
+  },
+  "emails": {
+    "invalid_emails": 132,
+    "invalid_rate_pct": 2.73,
+    "examples": [
+      "tom.miller@@gmail.com",
+      "not-an-email",
+      "liam.brown@@outlook.com",
+      "sofia.mooreexample.org",
+      "noah.thomas@@outlook.com"
+    ]
+  },
+  "stages": {
+    "distinct_raw_values": 26,
+    "canonical_values": [
+      "Closed Lost",
+      "Closed Won",
+      "Proposal",
+      "Prospecting",
+      "Qualification"
+    ],
+    "unmapped_values": [],
+    "unmapped_count": 0,
+    "standardization_map": {
+      "closed lost": "Closed Lost",
+      "closed won": "Closed Won",
+      "closed-lost": "Closed Lost",
+      "closed-won": "Closed Won",
+      "closedlost": "Closed Lost",
+      "closedwon": "Closed Won",
+      "discovery": "Qualification",
+      "lost": "Closed Lost",
+      "negotiation": "Proposal",
+      "new lead": "Prospecting",
+      "proposal": "Proposal",
+      "proposal sent": "Proposal",
+      "prospect": "Prospecting",
+      "prospecting": "Prospecting",
+      "qualifcation": "Qualification",
+      "qualification": "Qualification",
+      "qualified": "Qualification",
+      "quote sent": "Proposal",
+      "won": "Closed Won"
+    }
+  },
+  "dates": {
+    "future_created_dates": 70,
+    "close_before_created": 65,
+    "unparseable_close_dates": 0,
+    "unparseable_created_dates": 0,
+    "total_violations": 135
+  },
+  "owners": {
+    "orphan_owner_rows": 138,
+    "orphan_rate_pct": 2.76,
+    "orphan_ids": [
+      "U-0000",
+      "U-8888",
+      "U-9999",
+      "admin",
+      "inactive_user"
+    ]
+  },
+  "hygiene_before": {
+    "score": 71.4,
+    "penalties": {
+      "missing_values": 0.93,
+      "duplicates": 11.76,
+      "invalid_emails": 2.73,
+      "date_violations": 5.4,
+      "orphan_owners": 2.76,
+      "stage_inconsistency": 5.0
+    },
+    "grade": "C"
+  },
+  "hygiene_after": {
+    "score": 83.2,
+    "penalties": {
+      "missing_values": 0.93,
+      "duplicates": 0.0,
+      "invalid_emails": 2.61,
+      "date_violations": 5.48,
+      "orphan_owners": 2.76,
+      "stage_inconsistency": 5.0
+    },
+    "grade": "B"
+  },
+  "clean_records": 4706,
+  "rows_removed_as_duplicates": 294
+}

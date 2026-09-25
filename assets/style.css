@@ -1,0 +1,57 @@
+:root {
+  --ink: #16233a;
+  --muted: #5b6b82;
+  --accent: #1f6feb;
+  --accent-dark: #1a5fd0;
+  --card: #ffffff;
+  --bg: #f4f6fa;
+  --line: #dbe2ec;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  font-family: -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  background: var(--bg); color: var(--ink); line-height: 1.6;
+}
+.hero {
+  background: linear-gradient(135deg, #16233a 0%, #1f3a5f 60%, #24507e 100%);
+  color: #fff; padding: 4rem 1.5rem 3rem; text-align: center;
+}
+.hero h1 { font-size: 2.4rem; letter-spacing: -0.5px; }
+.tagline { color: #bcd0e8; font-size: 1.1rem; margin: 0.4rem 0 1rem; }
+.intro { max-width: 640px; margin: 0 auto 1.4rem; color: #dbe7f5; }
+.links a {
+  color: #fff; text-decoration: none; border: 1px solid rgba(255,255,255,.45);
+  padding: 0.45rem 1.1rem; border-radius: 999px; margin: 0 0.3rem; font-size: 0.95rem;
+}
+.links a:hover { background: rgba(255,255,255,.14); }
+main { max-width: 1020px; margin: 0 auto; padding: 2.5rem 1.5rem; }
+h2 { font-size: 1.5rem; margin-bottom: 1.2rem; }
+.grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.4rem; }
+.card {
+  background: var(--card); border: 1px solid var(--line); border-radius: 12px;
+  padding: 1.5rem; display: flex; flex-direction: column;
+  box-shadow: 0 2px 10px rgba(22,35,58,.06);
+}
+.card-tag {
+  align-self: flex-start; font-size: 0.75rem; font-weight: 700; letter-spacing: 0.6px;
+  text-transform: uppercase; color: var(--accent-dark);
+  background: #e8f0fe; border-radius: 6px; padding: 0.2rem 0.6rem; margin-bottom: 0.7rem;
+}
+.card h3 { font-size: 1.15rem; margin-bottom: 0.5rem; }
+.card p { color: var(--muted); font-size: 0.95rem; margin-bottom: 0.7rem; }
+.card ul { margin: 0 0 1.1rem 1.1rem; color: var(--muted); font-size: 0.9rem; }
+.btn {
+  margin-top: auto; align-self: flex-start; text-decoration: none; color: #fff;
+  background: var(--accent); padding: 0.55rem 1.2rem; border-radius: 8px; font-weight: 600;
+}
+.btn:hover { background: var(--accent-dark); }
+.skills, .about { margin-top: 3rem; }
+.chips span {
+  display: inline-block; background: #fff; border: 1px solid var(--line);
+  border-radius: 999px; padding: 0.35rem 0.9rem; margin: 0 0.4rem 0.6rem 0; font-size: 0.9rem;
+}
+.about p { color: var(--muted); max-width: 720px; }
+footer { text-align: center; padding: 2rem 1rem 3rem; color: var(--muted); font-size: 0.9rem; }
+footer a { color: var(--accent); }
+.fine { font-size: 0.8rem; margin-top: 0.4rem; }
+@media (max-width: 560px) { .hero h1 { font-size: 1.8rem; } }
